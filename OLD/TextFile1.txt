@@ -1,0 +1,105 @@
+﻿
+
+using System;
+
+// using DMCSCRIPTINGLib;
+using System.Runtime.InteropServices;
+
+
+namespace MediaTagger
+{
+
+    public class Tagger
+    {
+
+        [DllImport("dMCScripting.dll", CharSet = CharSet.Unicode)]
+        internal static extern void WriteIDTag(String filePath, String label, String labelValue);
+
+        static void Main(string[] args)
+        {
+
+            if (args.Length < 5)
+            {
+                Console.WriteLine("Usage: MediaTagger <media files directory path> <artist> <album> <year> <genre>");
+                Environment.Exit(0);
+            }
+
+            string artist = args[1];
+            string title = "";
+            string album = args[2];
+            string track = "";
+            string year = args[3];
+            string genre = args[4];
+
+            string dirPath = args[0];
+
+            DirectoryInfo dirInfo = new(dirPath);
+
+            FileInfo[] dirFiles = dirInfo.GetFiles("*.flac");
+
+            ConsoleUtility.WriteProgressBar(0);
+
+            for (int n = 0; n < dirFiles.Length; n++)
+            {
+                string filePath = dirFiles[n].FullName;
+                Console.WriteLine(dirFiles.Length.ToString() + " files found!\n");
+                Console.WriteLine(filePath);
+
+
+
+                
+                
+                
+                
+                
+                Console.WriteLine("1: -> " + dirFiles[n].Name);
+                string fileName = dirFiles[n].Name;
+                Console.WriteLine("2: -> " + dirFiles[n].Name);
+
+                track = fileName[..2];
+
+                Console.WriteLine("3: -> " + track);
+
+                title = fileName.Substring(5, fileName.Length - 10);
+
+                Console.WriteLine("4: -> " + title);
+
+                DMCSCRIPTINGLib.Converter dMC = new();
+
+                Console.WriteLine("5: -> Blah!");
+
+                dMC.WriteIDTag(filePath, "Artist", artist);
+                dMC.WriteIDTag(filePath, "Title", title);
+                dMC.WriteIDTag(filePath, "Album", album);
+                dMC.WriteIDTag(filePath, "Track", track);
+                dMC.WriteIDTag(filePath, "Year", year);
+                dMC.WriteIDTag(filePath, "Genre", genre);
+
+                /*
+                for (int i = 0; ; i++)
+                {
+                    string Element = "", TagVal = "";
+
+                    dMC.ReadIDTag(filePath, i, ref Element, ref TagVal);
+
+                    if (Element.Length == 0)
+                    {
+                        break;
+                    }
+                    
+
+
+                    Console.WriteLine(Element + ": " + TagVal);
+                }
+                */
+
+                float percentage = (float)(n + 1) / dirFiles.Length * 100;
+                ConsoleUtility.WriteProgressBar((int)percentage, true);
+
+            }
+
+            Environment.Exit(0);
+        }
+
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0/linux-musl-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {},
+    ".NETCoreApp,Version=v6.0/linux-musl-x64": {
+      "MediaTagger/1.0.0": {
+        "dependencies": {
+          "z440.atl.core": "3.25.0"
+        },
+        "runtime": {
+          "MediaTagger.dll": {}
+        }
+      },
+      "z440.atl.core/3.25.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/ATL.dll": {
+            "assemblyVersion": "3.25.0.0",
+            "fileVersion": "3.25.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MediaTagger/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "z440.atl.core/3.25.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0LM6YqoWUHQv4WPtbLW2eTTIxpzMuwdtVdlhLObZiqKK7DGl/odLJL4Wmeu+y/8IH8IdrNUsh/eiPj5psjO6XQ==",
+      "path": "z440.atl.core/3.25.0",
+      "hashPath": "z440.atl.core.3.25.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\MediaTagger
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\MediaTagger.deps.json
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\MediaTagger.runtimeconfig.json
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\MediaTagger.dll
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\ref\MediaTagger.dll
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\MediaTagger.pdb
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.AssemblyInfoInputs.cache
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.AssemblyInfo.cs
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.csproj.CoreCompileInputs.cache
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.dll
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\ref\MediaTagger.dll
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.pdb
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.genruntimeconfig.cache
+C:\Labs\Git\MediaTagger\bin\Release\net6.0\linux-musl-x64\ATL.dll
+C:\Labs\Git\MediaTagger\obj\Release\net6.0\linux-musl-x64\MediaTagger.csproj.CopyComplete
