@@ -2,10 +2,10 @@ namespace MediaTagger
 {
     public class DirectoryServices
     {
-        public static Album GetAlbum(string path)
+        public static MediaDirectory GetMediaDirectory(string path)
         {
-            Album album = new();
-            album.Path = path;
+            MediaDirectory directory = new();
+            directory.Path = path;
             
             if (path != null && path.Length > 0)
             {
@@ -19,6 +19,7 @@ namespace MediaTagger
 
                     if (dirInfo != null)
                     {
+                        /*
                         album.Name = dirInfo.Name[7..];
                         album.Year = dirInfo.Name[..4];
 
@@ -26,29 +27,30 @@ namespace MediaTagger
                         {
                             album.Artist = dirInfo.Parent.Name;
                         }
+                        */
 
                         files = dirInfo.GetFileSystemInfos()
                             .Where(file => extensions.Contains(file.Extension)).ToList();
                     }
 
-                    List<Track> tracks = new();
+                    List<MediaFile> mediaFiles = new();
 
                     int trackCounter = 0;
 
                     foreach (FileSystemInfo file in files)
                     {
-                        Track track = new();
-                        track.Number = (++ trackCounter).ToString().PadLeft(files.Count.ToString().Length, '0');
-                        track.Title = file.Name;
-                        track.Extension = file.Extension;
-                        track.Hash = file.GetHashCode();
+                        MediaFile mediaFile = new();
+                        mediaFile.Ordinal = (++ trackCounter).ToString().PadLeft(files.Count.ToString().Length, '0');
+                        mediaFile.Name = file.Name;
+                        mediaFile.Extension = file.Extension;
+                        mediaFile.Hash = file.GetHashCode();
 
-                        tracks.Add(track);
+                        mediaFiles.Add(mediaFile);
                     }
 
-                    if (tracks.Count > 0)
+                    if (mediaFiles.Count > 0)
                     {
-                        album.Tracks = new(tracks);
+                        directory.Files = new(mediaFiles);
                     }
                     else
                     {
@@ -61,7 +63,7 @@ namespace MediaTagger
                 }
             }
 
-            return album; 
+            return directory; 
          }        
     }
 }

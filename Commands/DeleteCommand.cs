@@ -24,8 +24,6 @@ namespace MediaTagger
 
         public override int Execute([NotNull] CommandContext context, [NotNull] Settings settings)
         {
-            SettingsDumper.Dump(settings);
-
             return 0;
         }
     }    

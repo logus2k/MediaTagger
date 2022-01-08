@@ -2,15 +2,16 @@ using System.Diagnostics.CodeAnalysis;
 
 using Spectre.Console.Cli;
 
+
 namespace MediaTagger
 {
     public class BaseCommand : Command<BaseCommand.Settings>
     {
         public class Settings : CommandSettings
         {
-            public Album OriginalAlbum = new();
+            public MediaDirectory OriginalDirectory = new();
             
-            public List<Album> ModifiedAlbums = new();
+            public List<MediaDirectory> ModifiedDirectories = new();
             
             private string? _path;
 
@@ -27,9 +28,29 @@ namespace MediaTagger
                     
                     if (Path != null && Path.Length > 0)
                     {
-                        OriginalAlbum = DirectoryServices.GetAlbum(Path);
+                        OriginalDirectory = DirectoryServices.GetMediaDirectory(Path);
 
-                        Album.ToConsole(OriginalAlbum);
+                        ConsoleWriter.MediaDirectoryReport(OriginalDirectory);
+                    }
+                }
+            }
+
+            private bool _debug;
+            
+            [CommandOption("--debug")]
+            public bool Debug
+            { 
+                get
+                {
+                    return _debug;
+                }
+                set
+                {
+                    _debug = value;
+
+                    if (_debug)
+                    {
+                        SettingsDumper.Dump(this);
                     }
                 }
             }

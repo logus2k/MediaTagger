@@ -3,17 +3,9 @@ using Spectre.Console;
 
 namespace MediaTagger
 {
-    public class Album
+    public class ConsoleWriter
     {
-        public string? Name { get; set; }
-        public string? Artist { get; set; }
-        // public List<Track>? Tracks { get; set; }
-        public string? Year { get; set; }
-        public string? Genre { get; set; }
-        public string? Path { get; set; }
-        public int Version { get; set; }
-
-        public static void ToConsole(MediaDirectory directory)
+        public static void MediaDirectoryReport(MediaDirectory directory)
         {
             Table mainTable = new();
             mainTable.HideHeaders();
