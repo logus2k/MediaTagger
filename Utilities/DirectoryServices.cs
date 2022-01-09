@@ -31,7 +31,7 @@ namespace MediaTagger
                     foreach (FileSystemInfo file in files)
                     {
                         MediaFile mediaFile = new();
-                        mediaFile.Ordinal = (++ trackCounter).ToString().PadLeft(files.Count.ToString().Length, '0');
+                        mediaFile.Ordinal = ++ trackCounter;
                         mediaFile.Name = file.Name;
                         mediaFile.Extension = file.Extension;
                         mediaFile.Hash = file.GetHashCode();

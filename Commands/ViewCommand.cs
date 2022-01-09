@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
+using Spectre.Console;
 using Spectre.Console.Cli;
 
 
@@ -9,11 +10,11 @@ namespace MediaTagger
     {
         public sealed class Settings : BaseCommand.Settings
         {
-            [CommandOption("-t|--table")]
-            public bool Table { get; set; }
+            [CommandOption("-f|--files")]
+            public bool Files { get; set; }
 
-            [CommandOption("-r|--record")]
-            public bool Record { get; set; }
+            [CommandOption("-m|--metadata")]
+            public bool Metadata { get; set; }
 
             [CommandOption("-d|--distinct")]
             public bool Distinct { get; set; } 
@@ -21,6 +22,19 @@ namespace MediaTagger
 
         public override int Execute([NotNull] CommandContext context, [NotNull] Settings settings)
         {
+            if (settings.Files)
+            {
+                ReportViewer.Files(settings.OriginalDirectory);
+            }
+            else if (settings.Metadata)
+            {
+                ReportViewer.Metadata(settings.OriginalDirectory);
+            }
+            else if (settings.Distinct)
+            {
+                AnsiConsole.WriteException(new NotImplementedException("Sorry, the Distinct View is not available yet."));
+            }
+            
             return 0;
         }
     }    

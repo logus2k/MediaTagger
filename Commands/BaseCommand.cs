@@ -30,8 +30,6 @@ namespace MediaTagger
                     {
                         OriginalDirectory = DirectoryServices.GetMediaDirectory(Path);
                         OriginalDirectory.Version = 1;
-
-                        ConsoleWriter.MediaDirectoryReport(OriginalDirectory);
                     }
                 }
             }
