@@ -16,19 +16,10 @@ namespace MediaTagger
 
                     DirectoryInfo dirInfo = new(path);
                     List<FileSystemInfo> files = new();
+                    List<MediaFileMetadata> mediaFileMetadata = new();
 
                     if (dirInfo != null)
                     {
-                        /*
-                        album.Name = dirInfo.Name[7..];
-                        album.Year = dirInfo.Name[..4];
-
-                        if (dirInfo.Parent != null)
-                        {
-                            album.Artist = dirInfo.Parent.Name;
-                        }
-                        */
-
                         files = dirInfo.GetFileSystemInfos()
                             .Where(file => extensions.Contains(file.Extension)).ToList();
                     }
@@ -44,6 +35,8 @@ namespace MediaTagger
                         mediaFile.Name = file.Name;
                         mediaFile.Extension = file.Extension;
                         mediaFile.Hash = file.GetHashCode();
+
+                        mediaFile.Metadata = MetadataManager.GetFileMetadata(file.FullName);
 
                         mediaFiles.Add(mediaFile);
                     }

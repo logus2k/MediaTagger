@@ -6,6 +6,6 @@ namespace MediaTagger
 
         public List<MediaFile>? Files { get; set; }
 
-        public string? Version { get; set; }        
+        public int Version { get; set; }        
     }
 }

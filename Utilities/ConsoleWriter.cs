@@ -9,6 +9,7 @@ namespace MediaTagger
         {
             Table mainTable = new();
             mainTable.HideHeaders();
+            mainTable.HideFooters();
             mainTable.NoBorder();
             mainTable.Width = TableWidth(directory);
 
@@ -23,6 +24,7 @@ namespace MediaTagger
 
             Table contextTable = new();
             contextTable.HideHeaders();
+            contextTable.HideFooters();
             contextTable.NoBorder();
 
             contextTable.AddColumn("");
@@ -34,11 +36,14 @@ namespace MediaTagger
             mainTable.AddRow(contextRule);
 
             Table filesTable = new();
-            filesTable.MinimalBorder();
+            filesTable.MinimalHeavyHeadBorder();
+            filesTable.HideFooters();
             filesTable.BorderColor(Color.Grey50);
 
-            filesTable.AddColumn(new TableColumn("[deepskyblue3]#[/]").RightAligned());
+            filesTable.AddColumn(new TableColumn("[grey]#[/]").RightAligned());
             filesTable.AddColumn(new TableColumn("[grey70]Files[/]"));
+            filesTable.AddColumn(new TableColumn("[grey70]Tags[/]"));
+            filesTable.AddColumn(new TableColumn("[grey70]Values[/]"));
 
             if (directory.Files != null)
             {
@@ -51,37 +56,43 @@ namespace MediaTagger
                         name = file.Name.Replace("[", "[[").Replace("]", "]]");
                     }
 
-                    filesTable.AddRow(
-                        "[deepskyblue3]" + file.Ordinal + "[/]",                        
-                        "[grey70]" + name + "[/]"
-                    );
+                    if (file.Metadata != null)
+                    {
+                        if (file.Metadata.TrackNumber != null)
+                        {
+                            filesTable.AddRow("[grey]" + file.Ordinal + "[/]", "[grey70]" + name + "[/]", "[grey]Track[/]", "[grey]" + file.Metadata.TrackNumber + "[/]");
+                        }
+                        else
+                        {
+                            filesTable.AddRow("[grey]" + file.Ordinal + "[/]", "[grey70]" + name + "[/]", "", "");
+                        }
+
+                        if (file.Metadata.Artist != null)
+                        {                        
+                            filesTable.AddRow("", "", "[grey]Artist[/]", "[grey]" + file.Metadata.Artist + "[/]");
+                        }
+                        
+                        if (file.Metadata.Album != null)
+                        {
+                            filesTable.AddRow("", "", "[grey]Album[/]", "[grey]" + file.Metadata.Album + "[/]");
+                        }
+                        
+                        if (file.Metadata.Year != null)
+                        {                        
+                            filesTable.AddRow("", "", "[grey]Year[/]", "[grey]" + file.Metadata.Year + "[/]");
+                        }
+                        
+                        if (file.Metadata.Genre != null)
+                        {                        
+                            filesTable.AddRow("", "", "[grey]Genre[/]", "[grey]" + file.Metadata.Genre + "[/]");
+                        }
+                        
+                        filesTable.AddEmptyRow();
+                    }
                 }
             }
 
-            Table metadataTable = new();
-            metadataTable.MinimalBorder();
-            metadataTable.BorderColor(Color.Grey50);
-
-            metadataTable.AddColumn(new TableColumn("[deepskyblue3]Tags[/]"));
-            metadataTable.AddColumn(new TableColumn("[grey70]Values[/]"));
-
-            /*
-            metadataTable.AddRow("[deepskyblue3]Artist[/]", "[grey70]" + album.Artist + "[/]");
-            metadataTable.AddRow("[deepskyblue3]Album [/]", "[grey70]" + album.Name + "[/]");            
-            metadataTable.AddRow("[deepskyblue3]Year  [/]", "[grey70]" + album.Year + "[/]");
-            metadataTable.AddRow("[deepskyblue3]Genre [/]", "[grey70]" + album.Genre + "[/]");
-            */
-
-            Table detailsTable = new();
-            detailsTable.HideHeaders();
-            detailsTable.NoBorder();
-
-            detailsTable.AddColumn("");
-            detailsTable.AddColumn(""); 
-
-            detailsTable.AddRow(filesTable, metadataTable);
-
-            mainTable.AddRow(detailsTable);
+            mainTable.AddRow(filesTable);
 
             AnsiConsole.Write(mainTable);
         }

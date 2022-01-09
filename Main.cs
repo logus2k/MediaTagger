@@ -1,3 +1,10 @@
+/*
+References:
+https://github.com/Zeugma440/atldotnet
+https://github.com/spectreconsole/spectre.console
+https://spectreconsole.net/
+*/
+
 using Spectre.Console.Cli;
 
 

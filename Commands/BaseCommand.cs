@@ -29,6 +29,7 @@ namespace MediaTagger
                     if (Path != null && Path.Length > 0)
                     {
                         OriginalDirectory = DirectoryServices.GetMediaDirectory(Path);
+                        OriginalDirectory.Version = 1;
 
                         ConsoleWriter.MediaDirectoryReport(OriginalDirectory);
                     }
