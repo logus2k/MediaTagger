@@ -32,7 +32,7 @@ namespace MediaTagger
             }
             else if (settings.Distinct)
             {
-                AnsiConsole.WriteException(new NotImplementedException("Sorry, the Distinct View is not available yet."));
+                AnsiConsole.WriteException(new NotImplementedException("Distinct View is not implemented yet."));
             }
             
             return 0;

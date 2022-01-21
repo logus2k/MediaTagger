@@ -5,7 +5,7 @@ namespace MediaTagger
         public static MediaDirectory GetMediaDirectory(string path)
         {
             MediaDirectory directory = new();
-            directory.Path = path;
+            directory.Path = path.Replace("[", "[[").Replace("]", "]]");
             
             if (path != null && path.Length > 0)
             {

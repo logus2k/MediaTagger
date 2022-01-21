@@ -24,15 +24,22 @@ namespace MediaTagger
 
         public override int Execute([NotNull] CommandContext context, [NotNull] Settings settings)
         {
-            /*
-            string text = StringUtilities.StringFromList(settings.OriginalTracks);
+            // string text = StringUtilities.StringFromList(settings.OriginalTracks);
+
+            string?[] text = Array.Empty<string>();
+            
+            if (settings.OriginalDirectory != null && settings.OriginalDirectory.Files != null)
+            {
+                text = settings.OriginalDirectory.Files.Select(file => file.Name).ToArray();
+            }
             
             if (settings.Dictionary != null && settings.Dictionary.Length > 0)
             {
-                text += settings.Dictionary;
+                text[text.Length] = settings.Dictionary;
             }
 
-            string output = RegExHelper.Replace(text, settings.Pattern, settings.Substitution);
+            /*
+            string output = RegExEngine.Replace(text, settings.Pattern, settings.Substitution);
 
             if (settings.Dictionary != null && settings.Dictionary.Length > 0)
             {
@@ -46,6 +53,8 @@ namespace MediaTagger
                 Console.WriteLine(track.Number + " - " + track.Title + track.Extension);
             }
             */
+
+
 
             return 0;
         }

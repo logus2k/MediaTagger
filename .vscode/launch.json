@@ -12,8 +12,8 @@
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/net6.0/MediaTagger.dll",
             "args": 
-                ["replace", 
-                "C:\\Music\\ABBA\\1992 - Gold - Greatest Hits"],
+                ["view", 
+                "\\\\DROBO5N2\\Downloads\\Done\\Cock Robin - [1990] Collection Gold", "-m"],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "integratedTerminal",
