@@ -1,4 +1,4 @@
-/*
+/* 
 References:
 https://github.com/Zeugma440/atldotnet
 https://github.com/spectreconsole/spectre.console
@@ -14,7 +14,7 @@ namespace MediaTagger
     {
         static void Main(string[] args)
         {
-            var app = new CommandApp();
+            var app = new CommandApp(); 
 
             app.Configure(config =>
             {
