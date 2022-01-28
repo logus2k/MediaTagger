@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'mydotnet'
-            label 'mydotnet_container'
         }
     }
     stages {
