@@ -4,6 +4,7 @@ pipeline {
             image 'mydotnet'
             label 'mydotnet'
         }
+    }
     stages {
         stage('Build') {
             steps {
