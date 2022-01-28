@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'mydotnet'
+            label 'mydotnet_container'
+        }
+    }
     stages {
         stage('Build') {
             steps {
