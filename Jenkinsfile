@@ -3,7 +3,7 @@ pipeline {
         docker { 
       
             image 'mydotnet_sdk:latest'
-            args 'ash -l'
+
         }
     }
     stages {
@@ -11,7 +11,7 @@ pipeline {
             steps {
 
                 // sh 'dotnet restore'
-                sh 'dotnet --info'
+                sh '/root/dotnet/dotnet --info'
 
             }
         }
