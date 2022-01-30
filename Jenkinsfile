@@ -11,7 +11,7 @@ pipeline {
             steps {
 
                 // sh 'dotnet restore'
-                sh 'cat /etc/os-release'
+                sh 'dotnet --info'
 
             }
         }
