@@ -3,6 +3,7 @@ pipeline {
         docker { 
       
           image 'mydotnet'
+          args 'dotnet restore'
 
         }
     }
