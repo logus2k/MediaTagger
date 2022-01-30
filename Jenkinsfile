@@ -11,7 +11,7 @@ pipeline {
             steps {
 
                 // sh 'dotnet restore'
-                sh '/root/dotnet/dotnet --info'
+                sh 'dotnet --info'
 
             }
         }
