@@ -11,7 +11,7 @@ pipeline {
             steps {
 
                 // sh 'dotnet restore'
-                sh 'echo Hello from Restore Stage!'
+                sh 'cat /etc/os-release'
 
             }
         }
