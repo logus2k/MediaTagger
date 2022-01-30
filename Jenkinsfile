@@ -3,7 +3,6 @@ pipeline {
         docker { 
       
           image 'mydotnet_sdk:latest'
-          args 'ash -l'
 
         }
     }
