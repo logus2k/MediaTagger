@@ -2,7 +2,8 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet:latest'
+          image 'mydotnet_sdk:latest'
+          args 'ash -l'
 
         }
     }
