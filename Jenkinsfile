@@ -2,10 +2,11 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet'
+          image 'mydotnet:latest'
 
         }
     }
+    /*
     stages {
          stage('Restore') {
             steps {
@@ -29,5 +30,6 @@ pipeline {
                
             }
         }
+        */
     }
 }
