@@ -6,12 +6,12 @@ pipeline {
 
         }
     }
-    /*
     stages {
          stage('Restore') {
             steps {
 
-                sh 'dotnet restore'
+                // sh 'dotnet restore'
+                sh 'echo Hello from Restore Stage!'
 
             }
         }
@@ -31,5 +31,4 @@ pipeline {
             }
         }
     }
-    */
 }
