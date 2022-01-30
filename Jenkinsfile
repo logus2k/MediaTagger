@@ -3,7 +3,6 @@ pipeline {
         docker { 
       
           image 'mydotnet'
-          label 'mydotnet_image'
 
         }
         
