@@ -7,6 +7,7 @@ pipeline {
         }
     }
     stages {
+
         stage('Restore') {
             steps {
 
@@ -14,6 +15,7 @@ pipeline {
 
             }
         }
+        
         stage('Build') {
             steps {
                
@@ -21,6 +23,15 @@ pipeline {
                
             }
         }
+
+        stage('Test') {
+            steps {
+
+                sh 'dotnet test ./MediaTagger.csproj -c Release -r /results'
+
+            }
+        }
+
         stage('Deploy') {
             steps {
 
@@ -29,5 +40,6 @@ pipeline {
                
             }
         }
+
     }
 }
