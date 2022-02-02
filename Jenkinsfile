@@ -4,9 +4,10 @@ pipeline {
 
     stages {
 
-        agent { docker { image 'mydotnet_sdk:latest' } }
-        
         stage('Restore') {
+
+            agent { docker { image 'mydotnet_sdk:latest' } }
+
             steps {
 
                 sh 'dotnet restore'
