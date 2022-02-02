@@ -1,13 +1,11 @@
 pipeline {
-    agent {
-        docker { 
-      
-            image 'mydotnet_sdk:latest'
 
-        }
-    }
+    agent any 
+
     stages {
 
+        agent { docker { image 'mydotnet_sdk:latest' } }
+        
         stage('Restore') {
             steps {
 
