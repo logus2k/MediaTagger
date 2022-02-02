@@ -1,8 +1,6 @@
 pipeline {
 
-    agent { 
-        label 'jenkinsagent01' 
-    } 
+    agent { docker { image 'mydotnet_sdk:latest' } }
 
     stages {
 
