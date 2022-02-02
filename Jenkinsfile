@@ -1,24 +1,20 @@
 pipeline {
-
     agent {
         docker { 
-    
-            image 'mydotnet_sdk:latest'
+      
+          image 'mydotnet_runtime:latest'
 
         }
     }
-
     stages {
-
-        stage('Restore') {
-
+         stage('Restore') {
             steps {
 
-                sh 'dotnet restore'
+                // sh 'dotnet restore'
+                sh 'dotnet --info'
 
             }
         }
-        
         stage('Build') {
             steps {
                
@@ -26,15 +22,6 @@ pipeline {
                
             }
         }
-
-        stage('Test') {
-            steps {
-
-                sh 'dotnet test ./MediaTagger.csproj -c Release -r /results'
-
-            }
-        }
-
         stage('Deploy') {
             steps {
 
@@ -43,6 +30,5 @@ pipeline {
                
             }
         }
-
     }
 }
