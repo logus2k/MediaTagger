@@ -1,5 +1,5 @@
 pipeline {
-    agent docker {
+    agent {
         docker { 
       
           image 'mydotnet_runtime:latest'
