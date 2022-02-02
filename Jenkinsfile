@@ -1,6 +1,6 @@
 pipeline {
 
-    agent { docker { image 'mydotnet_sdk:latest' } }
+    agent any
 
     stages {
 
