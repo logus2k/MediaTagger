@@ -1,19 +1,15 @@
 pipeline {
+    agent {
+        docker { 
+      
+          image 'mydotnet_sdk:v2'
 
-    agent any
+        }
+    }
 
     stages {
          
-        stage('Restore') {
-
-            agent {
-                docker { 
-            
-                image 'mydotnet_sdk:v2'
-
-                }
-            }
-
+         stage('Restore') {
             steps {
 
                 sh 'dotnet restore'
@@ -21,15 +17,6 @@ pipeline {
             }
         }
         stage('Build') {
-
-            agent {
-                docker { 
-            
-                image 'mydotnet_sdk:v2'
-
-                }
-            }
-
             steps {
                
                 sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
@@ -37,15 +24,6 @@ pipeline {
             }
         }
         stage('Deploy') {
-
-            agent {
-                docker { 
-            
-                image 'mydotnet_sdk:v2'
-
-                }
-            }
-
             steps {
 
                 sh 'mkdir deploy'
