@@ -2,15 +2,9 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:latest'
+          image 'mydotnet_sdk:v2'
 
         }
-    }
-
-    environment {
-        
-        DOTNET_CLI_HOME= '/tmp'
-    
     }
 
     stages {
