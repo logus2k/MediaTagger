@@ -9,12 +9,12 @@ pipeline {
 
     environment {
         
-        HOME = '/tmp'
+        DOTNET_CLI_HOME= '/tmp'
     
     }
 
     stages {
-         /*
+         
          stage('Restore') {
             steps {
 
@@ -22,11 +22,10 @@ pipeline {
 
             }
         }
-        */
         stage('Build') {
             steps {
                
-                sh '/usr/share/dotnet/dotnet build --configuration Release ./MediaTagger.csproj'           
+                sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
                
             }
         }
@@ -34,7 +33,7 @@ pipeline {
             steps {
 
                 sh 'mkdir deploy'
-                sh '/usr/share/dotnet/dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
+                sh 'dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
                
             }
         }
