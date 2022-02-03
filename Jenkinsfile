@@ -6,6 +6,13 @@ pipeline {
 
         }
     }
+
+    environment {
+        
+        HOME = '/tmp'
+    
+    }
+
     stages {
          stage('Restore') {
             steps {
