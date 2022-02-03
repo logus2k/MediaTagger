@@ -26,7 +26,7 @@ pipeline {
         stage('Build') {
             steps {
                
-                sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
+                sh '/usr/share/dotnet/dotnet build --configuration Release ./MediaTagger.csproj'           
                
             }
         }
@@ -34,7 +34,7 @@ pipeline {
             steps {
 
                 sh 'mkdir deploy'
-                sh 'dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
+                sh '/usr/share/dotnet/dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
                
             }
         }
