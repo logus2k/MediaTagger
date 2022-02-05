@@ -25,8 +25,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-
-                sh 'docker images'
                 
                 sh 'mkdir deploy'
                 sh 'dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
