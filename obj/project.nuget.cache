@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VDb2aHwHMLgVeb9NIuNDDSv4lyZW5BBBPrP5zVzCMuEWfwzEws1KmcUM2HDZmLaORxxlSLnBbYjPgQ7EyNVmSg==",
+  "dgSpecHash": "ETzPBOaxPQWKgj38AW9jA6abevSeGp/lRNdlYeOd4TJXM5nsbavR9ukV3BvKTJv/LrscB/mPST0qwzJQhZ9Qag==",
   "success": true,
-  "projectFilePath": "C:\\Labs\\Git\\MediaTagger\\MediaTagger.csproj",
+  "projectFilePath": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\logus\\.nuget\\packages\\spectre.console\\0.43.0\\spectre.console.0.43.0.nupkg.sha512",
-    "C:\\Users\\logus\\.nuget\\packages\\z440.atl.core\\4.3.0\\z440.atl.core.4.3.0.nupkg.sha512"
+    "/home/logus/.nuget/packages/spectre.console/0.43.0/spectre.console.0.43.0.nupkg.sha512",
+    "/home/logus/.nuget/packages/z440.atl.core/4.3.0/z440.atl.core.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
