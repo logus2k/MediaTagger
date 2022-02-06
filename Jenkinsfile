@@ -9,16 +9,15 @@ pipeline {
 
     stages {
          
-         /*
          stage('Restore') {
             steps {
 
+                sh 'dotnet clean'
                 sh 'dotnet restore'
 
             }
         }
-        */
-        
+
         stage('Build') {
             steps {
                
