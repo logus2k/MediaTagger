@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:v2'
+          image 'mydotnet_sdk:v3'
 
         }
     }
@@ -29,9 +29,9 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
-                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"MediaTagger\""
+                    sh "dotnet-sonarscanner begin /k:\"MediaTagger\""
                     sh "dotnet build"
-                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll end"
+                    sh "dotnet-sonarscanner end"
 
                 }
 
