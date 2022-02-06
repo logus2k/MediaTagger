@@ -29,6 +29,9 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
+                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"MediaTagger\""
+                    sh "dotnet build"
+                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll end"
 
                 }
 
