@@ -12,6 +12,7 @@ pipeline {
          stage('Restore') {
             steps {
 
+                sh 'dotnet clean'
                 sh 'dotnet restore'
 
             }
@@ -29,9 +30,9 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
-                    sh "/tmp/.dotnet/tools/dotnet-sonarscanner begin /k:\"MediaTagger\""
+                    sh "dotnet-sonarscanner begin /k:\"MediaTagger\""
                     sh "dotnet build"
-                    sh "/tmp/.dotnet/tools/dotnet-sonarscanner end"
+                    sh "dotnet-sonarscanner end"
 
                 }
 
