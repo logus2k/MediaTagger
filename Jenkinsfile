@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:v3'
+          image 'mydotnet_sdk:v2'
 
         }
     }
