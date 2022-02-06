@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj": {}
+    "C:\\Labs\\Git\\MediaTagger\\MediaTagger.csproj": {}
   },
   "projects": {
-    "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj": {
+    "C:\\Labs\\Git\\MediaTagger\\MediaTagger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
+        "projectUniqueName": "C:\\Labs\\Git\\MediaTagger\\MediaTagger.csproj",
         "projectName": "MediaTagger",
-        "projectPath": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
-        "packagesPath": "/home/logus/.nuget/packages/",
-        "outputPath": "/mnt/c/Labs/Git/MediaTagger/obj/",
+        "projectPath": "C:\\Labs\\Git\\MediaTagger\\MediaTagger.csproj",
+        "packagesPath": "C:\\Users\\logus\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\Git\\MediaTagger\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/logus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\logus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

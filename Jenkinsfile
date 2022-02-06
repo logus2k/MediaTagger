@@ -12,7 +12,6 @@ pipeline {
          stage('Restore') {
             steps {
 
-                sh 'dotnet clean'
                 sh 'dotnet restore'
 
             }
@@ -20,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                
-                sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
+                sh 'dotnet build --no-restore --configuration Release ./MediaTagger.csproj'           
                
             }
         }
@@ -30,9 +29,9 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
-                    sh "dotnet-sonarscanner begin /k:\"MediaTagger\""
-                    sh "dotnet build"
-                    sh "dotnet-sonarscanner end"
+                    sh 'dotnet-sonarscanner begin /k:\"MediaTagger\"'
+                    sh 'dotnet build --no-restore'
+                    sh 'dotnet-sonarscanner end'
 
                 }
 
@@ -44,7 +43,7 @@ pipeline {
             steps {
                 
                 sh 'mkdir deploy'
-                sh 'dotnet publish --self-contained --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
+                sh 'dotnet publish --self-contained --no-restore --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
                
             }
         }
