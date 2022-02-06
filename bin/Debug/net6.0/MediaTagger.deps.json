@@ -9,7 +9,7 @@
       "MediaTagger/1.0.0": {
         "dependencies": {
           "Spectre.Console": "0.43.0",
-          "z440.atl.core": "4.1.0"
+          "z440.atl.core": "4.3.0"
         },
         "runtime": {
           "MediaTagger.dll": {}
@@ -23,11 +23,11 @@
           }
         }
       },
-      "z440.atl.core/4.1.0": {
+      "z440.atl.core/4.3.0": {
         "runtime": {
           "lib/netcoreapp3.1/ATL.dll": {
-            "assemblyVersion": "4.1.0.0",
-            "fileVersion": "4.1.0.0"
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
           }
         }
       }
@@ -46,12 +46,12 @@
       "path": "spectre.console/0.43.0",
       "hashPath": "spectre.console.0.43.0.nupkg.sha512"
     },
-    "z440.atl.core/4.1.0": {
+    "z440.atl.core/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HfwxErE83aD6NAtQUVOwz1fjim078DsVEV0c045EvKiTUWvshm8kxMdmuqKuxS7EyJcgSLprutsFIw9Fn7OXmQ==",
-      "path": "z440.atl.core/4.1.0",
-      "hashPath": "z440.atl.core.4.1.0.nupkg.sha512"
+      "sha512": "sha512-cV1qnZnjkr0vHLvhqzplzkDP7H4af2rkdWDtqV+vMSdj5oocu40Wa2oR2W3xQ630zSH+yArZtfGSlB6+qr2yrA==",
+      "path": "z440.atl.core/4.3.0",
+      "hashPath": "z440.atl.core.4.3.0.nupkg.sha512"
     }
   }
 }

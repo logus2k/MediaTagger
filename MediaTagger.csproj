@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Spectre.Console" Version="0.43.0" />
-    <PackageReference Include="z440.atl.core" Version="4.1.0" />
+    <PackageReference Include="z440.atl.core" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

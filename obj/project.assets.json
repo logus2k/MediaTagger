@@ -11,7 +11,7 @@
           "lib/net6.0/Spectre.Console.dll": {}
         }
       },
-      "z440.atl.core/4.1.0": {
+      "z440.atl.core/4.3.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/ATL.dll": {}
@@ -41,10 +41,10 @@
         "spectre.console.nuspec"
       ]
     },
-    "z440.atl.core/4.1.0": {
-      "sha512": "HfwxErE83aD6NAtQUVOwz1fjim078DsVEV0c045EvKiTUWvshm8kxMdmuqKuxS7EyJcgSLprutsFIw9Fn7OXmQ==",
+    "z440.atl.core/4.3.0": {
+      "sha512": "cV1qnZnjkr0vHLvhqzplzkDP7H4af2rkdWDtqV+vMSdj5oocu40Wa2oR2W3xQ630zSH+yArZtfGSlB6+qr2yrA==",
       "type": "package",
-      "path": "z440.atl.core/4.1.0",
+      "path": "z440.atl.core/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -54,7 +54,7 @@
         "lib/netcoreapp3.1/ATL.xml",
         "lib/netstandard2.1/ATL.dll",
         "lib/netstandard2.1/ATL.xml",
-        "z440.atl.core.4.1.0.nupkg.sha512",
+        "z440.atl.core.4.3.0.nupkg.sha512",
         "z440.atl.core.nuspec"
       ]
     }
@@ -62,7 +62,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Spectre.Console >= 0.43.0",
-      "z440.atl.core >= 4.1.0"
+      "z440.atl.core >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -110,7 +110,7 @@
           },
           "z440.atl.core": {
             "target": "Package",
-            "version": "[4.1.0, )"
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
