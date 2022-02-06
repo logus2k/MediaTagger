@@ -30,6 +30,7 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
 
 
+                }
 
             }
         }
