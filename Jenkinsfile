@@ -29,9 +29,9 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
-                    sh "dotnet-sonarscanner begin /k:\"MediaTagger\""
+                    sh "/tmp/.dotnet/tools/dotnet-sonarscanner begin /k:\"MediaTagger\""
                     sh "dotnet build"
-                    sh "dotnet-sonarscanner end"
+                    sh "/tmp/.dotnet/tools/dotnet-sonarscanner end"
 
                 }
 
