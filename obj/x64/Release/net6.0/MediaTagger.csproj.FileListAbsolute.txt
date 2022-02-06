@@ -1,7 +1,0 @@
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.csproj.AssemblyReference.cache
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\Interop.DMCSCRIPTINGLib.dll
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.csproj.ResolveComReference.cache
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.GeneratedMSBuildEditorConfig.editorconfig
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.AssemblyInfoInputs.cache
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.AssemblyInfo.cs
-C:\Labs\Git\MediaTagger\obj\x64\Release\net6.0\MediaTagger.csproj.CoreCompileInputs.cache

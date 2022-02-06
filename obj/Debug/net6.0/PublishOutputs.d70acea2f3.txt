@@ -1,7 +1,0 @@
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/MediaTagger
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/MediaTagger.dll
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/MediaTagger.deps.json
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/MediaTagger.runtimeconfig.json
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/MediaTagger.pdb
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/Spectre.Console.dll
-/mnt/c/Labs/Git/MediaTagger/bin/Debug/net6.0/publish/ATL.dll
