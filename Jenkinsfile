@@ -23,6 +23,18 @@ pipeline {
                
             }
         }
+
+        stage('Sonarqube') {
+            steps {
+
+                withSonarQubeEnv('sonarqube') {
+
+
+
+            }
+        }
+
+
         stage('Deploy') {
             steps {
                 
