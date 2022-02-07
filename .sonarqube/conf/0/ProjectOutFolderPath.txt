@@ -1,1 +1,0 @@
-/home/logus/dev/media_tagger/.sonarqube/out/0
