@@ -9,7 +9,6 @@ pipeline {
 
     stages {
          
-        /*
         stage('Restore') {
             steps {
 
@@ -17,7 +16,6 @@ pipeline {
 
             }
         }
-        */
 
         stage('Build') {
             steps {
