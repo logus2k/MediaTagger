@@ -25,7 +25,6 @@ pipeline {
             }
         }
 
-        /*
         stage('Sonarqube') {
             steps {
 
@@ -39,8 +38,6 @@ pipeline {
 
             }
         }
-        */
-
 
         stage('Deploy') {
             steps {
