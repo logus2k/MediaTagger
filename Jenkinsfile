@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:v3'
+          image 'mydotnet_sdk:v4'
 
         }
     }
@@ -11,9 +11,6 @@ pipeline {
          
         stage('Restore') {
             steps {
-
-                sh 'export TMPDIR=/tmp/NuGetScratch/'
-                sh 'mkdir -p /tmp/NuGetScratch/'
 
                 sh 'dotnet restore'
 
