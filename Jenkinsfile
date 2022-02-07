@@ -2,8 +2,8 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:v4'
-          args '--network jenkins -e SONAR_HOST_URL=\"http://sonarqube:9000\"'
+          image 'mydotnet_sdk:v5'
+          args '--network jenkins'
 
         }
     }
