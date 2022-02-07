@@ -3,7 +3,7 @@ pipeline {
         docker { 
       
           image 'mydotnet_sdk:v4'
-          args '-network jenkins'
+          args '--network jenkins'
 
         }
     }
