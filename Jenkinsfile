@@ -12,6 +12,9 @@ pipeline {
         stage('Restore') {
             steps {
 
+                sh 'export TMPDIR=/tmp/NuGetScratch/'
+                sh 'mkdir -p ${TMPDIR}'
+
                 sh 'dotnet restore'
 
             }
