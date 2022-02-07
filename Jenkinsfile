@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
       
-          image 'mydotnet_sdk:v5'
+          image 'mydotnet_sdk:v4'
           args '--network jenkins'
 
         }
