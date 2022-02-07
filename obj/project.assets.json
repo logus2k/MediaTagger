@@ -71,11 +71,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
+      "projectUniqueName": "/home/logus/dev/media_tagger/MediaTagger.csproj",
       "projectName": "MediaTagger",
-      "projectPath": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
+      "projectPath": "/home/logus/dev/media_tagger/MediaTagger.csproj",
       "packagesPath": "/home/logus/.nuget/packages/",
-      "outputPath": "/mnt/c/Labs/Git/MediaTagger/obj/",
+      "outputPath": "/home/logus/dev/media_tagger/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/logus/.nuget/NuGet/NuGet.Config"

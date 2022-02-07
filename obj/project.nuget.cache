@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ETzPBOaxPQWKgj38AW9jA6abevSeGp/lRNdlYeOd4TJXM5nsbavR9ukV3BvKTJv/LrscB/mPST0qwzJQhZ9Qag==",
+  "dgSpecHash": "HhIu7yjTWEb4BktTZVt+lFYhp/gQzLgKWtqwUtTflduOw5h6wg+vTSBpM3QKTJSMWddA8KnVMFqRuot9GiABQw==",
   "success": true,
-  "projectFilePath": "/mnt/c/Labs/Git/MediaTagger/MediaTagger.csproj",
+  "projectFilePath": "/home/logus/dev/media_tagger/MediaTagger.csproj",
   "expectedPackageFiles": [
     "/home/logus/.nuget/packages/spectre.console/0.43.0/spectre.console.0.43.0.nupkg.sha512",
     "/home/logus/.nuget/packages/z440.atl.core/4.3.0/z440.atl.core.4.3.0.nupkg.sha512"
