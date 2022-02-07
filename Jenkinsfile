@@ -13,7 +13,7 @@ pipeline {
             steps {
 
                 sh 'export TMPDIR=/tmp/NuGetScratch/'
-                sh 'mkdir -p ${TMPDIR}'
+                sh 'mkdir -p /tmp/NuGetScratch/'
 
                 sh 'dotnet restore'
 
