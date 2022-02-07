@@ -33,6 +33,13 @@ pipeline {
 
                     sh 'dotnet-sonarscanner begin /k:\"MediaTagger\" /d:sonar.login=\"c193c2ae68578f1a4fa8e5f4ab52052484c8cc8b\" /d:sonar.host.url=http://sonarqube:9000'
                     sh 'dotnet build --no-restore'
+
+                    sh 'echo Scanner configuration file:'
+                    sh 'cat /tmp/.dotnet/tools/.store/dotnet-sonarscanner/5.4.1/dotnet-sonarscanner/5.4.1/tools/net5.0/any/sonar-scanner-4.6.2.2472/conf/sonar-scanner.properties'
+
+                    sh 'echo Project root configuration file:'
+                    sh 'cat /var/jenkins_home/workspace/MediaTagger_master/.sonarqube/out/sonar-project.properties'
+
                     sh 'dotnet-sonarscanner end /d:sonar.login=\"c193c2ae68578f1a4fa8e5f4ab52052484c8cc8b\"'
 
                 }
