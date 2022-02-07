@@ -9,11 +9,11 @@ pipeline {
 
     stages {
          
-         stage('Restore') {
+        /*
+        stage('Restore') {
             steps {
 
-                sh 'dotnet clean'
-                // sh 'dotnet restore'
+                sh 'dotnet restore'
 
             }
         }
@@ -25,6 +25,7 @@ pipeline {
                
             }
         }
+        */
 
         stage('Sonarqube') {
             steps {
