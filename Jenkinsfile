@@ -13,7 +13,7 @@ pipeline {
             steps {
 
                 sh 'dotnet clean'
-                sh 'dotnet restore'
+                // sh 'dotnet restore'
 
             }
         }
