@@ -33,7 +33,7 @@ pipeline {
 
                     sh 'dotnet-sonarscanner begin /k:\"MediaTagger\" /d:sonar.login=\"c193c2ae68578f1a4fa8e5f4ab52052484c8cc8b\" /d:sonar.host.url=http://sonarqube:9000'
 
-                    sh 'env'
+                    sh 'SONAR_HOST_URL=http://sonarqube:9000'
                     
                     sh 'dotnet build --no-restore'
                 
