@@ -11,6 +11,21 @@ pipeline {
     }
 
     stages {
+
+        stage('Restore') {
+            steps {
+
+                sh 'dotnet restore'
+
+            }
+        }
+        stage('Build') {
+            steps {
+               
+                sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
+               
+            }
+        }        
          
         stage('Build') {
             steps {
