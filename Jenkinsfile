@@ -5,7 +5,7 @@ pipeline {
             docker { 
       
                 image 'mydotnet_sdk:v0'
-                args '-n jenkins -e SONAR_HOST_URL=\"http://quasar:9000\"'
+                args '-u root -n jenkins -e SONAR_HOST_URL=\"http://quasar:9000\"'
 
             }
         }
