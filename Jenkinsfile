@@ -19,11 +19,11 @@ pipeline {
                 sh 'cat /etc/passwd'
                 sh 'whoami'
                 
-                sh 'dotnet sonarscanner begin /k:"MediaTagger" /d:sonar.host.url="http://quasar:9000" /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
+                sh '/usr/share/dotnet/dotnet sonarscanner begin /k:"MediaTagger" /d:sonar.host.url="http://quasar:9000" /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
 
-                sh 'dotnet build'
+                sh '/usr/share/dotnet/dotnet build'
             
-                sh 'dotnet sonarscanner end /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
+                sh '/usr/share/dotnet/dotnet sonarscanner end /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
 
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 
                 sh 'mkdir deploy'
-                sh 'dotnet publish --self-contained --no-restore --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
+                sh '/usr/share/dotnet/dotnet publish --self-contained --no-restore --runtime win-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
                
             }
         }
