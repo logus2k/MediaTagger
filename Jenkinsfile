@@ -5,7 +5,7 @@ pipeline {
         docker { 
     
             image 'mydotnet_sdk:v0'
-            args '--network jenkins'
+            args '--network jenkins"'
 
         }
     }
@@ -19,20 +19,13 @@ pipeline {
 
             }
         }
+         
         stage('Build') {
             steps {
-               
-                sh 'dotnet build --configuration Release ./MediaTagger.csproj'           
-               
-            }
-        }        
-         
-        stage('Analyze') {
-            steps {
 
-                sh 'dotnet sonarscanner begin /k:"MediaTagger" /d:sonar.host.url="http://quasar:9000" /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
+                sh 'dotnet sonarscanner begin /k:"MediaTagger" /d:sonar.host.url="http://sonarqube:9000" /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
 
-                sh 'dotnet build'
+                sh 'dotnet build --no-restore'
             
                 sh 'dotnet sonarscanner end /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
 
