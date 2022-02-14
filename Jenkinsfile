@@ -27,7 +27,7 @@ pipeline {
             }
         }        
          
-        stage('Build') {
+        stage('Analyze') {
             steps {
 
                 sh 'dotnet sonarscanner begin /k:"MediaTagger" /d:sonar.host.url="http://quasar:9000" /d:sonar.login="e5bf76ebefb345914bbb3845aba63949104d6c83"'
