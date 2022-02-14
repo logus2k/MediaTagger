@@ -36,7 +36,7 @@ pipeline {
             steps {
                 
                 sh 'mkdir deploy'
-                sh 'dotnet publish --self-contained --no-restore --runtime linux-musl-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
+                sh 'dotnet publish --self-contained --runtime linux-musl-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'            
                
             }
         }
