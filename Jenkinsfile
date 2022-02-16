@@ -37,7 +37,6 @@ pipeline {
                 
                 sh 'mkdir deploy'
                 sh 'dotnet publish --self-contained --runtime linux-musl-x64 -c Release ./MediaTagger.csproj -o ./deploy/MediaTagger'
-                sh 'docker cp jenkinsagent03:/home/jenkins/agent/workspace/MediaTagger_master/deploy/MediaTagger/*.* ~/prod/deploy/MediaTagger/linux-musl-x64'
                
             }
         }
